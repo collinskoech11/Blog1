@@ -1,6 +1,9 @@
 @import 'https://fonts.googleapis.com/css?family=Montserrat';
 * {
   font-family: Montserrat;
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
 }
 
 html {
@@ -26,6 +29,8 @@ p {
 
 .header {
   width: 80%;
+  position: absolute;
+  top: 0;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -457,4 +462,10 @@ h1,h2,h3,h4,h5,h6 {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   opacity: 1;
+}
+
+/**For the homepage styling in carousel */
+
+.carousel-indicators {
+  bottom: -60px;
 }
