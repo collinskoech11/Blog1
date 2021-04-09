@@ -1,6 +1,9 @@
 @import 'https://fonts.googleapis.com/css?family=Montserrat';
 * {
   font-family: Montserrat;
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
 }
 
 html {
@@ -13,7 +16,8 @@ html {
 body {
   margin: 0;
 }
-
+/**HEADER STYLING */
+/**=======================================================================*/
 a {
   color: #777;
   text-decoration: none;
@@ -26,6 +30,8 @@ p {
 
 .header {
   width: 80%;
+  position: absolute;
+  top: 0;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -313,148 +319,438 @@ h1,h2,h3,h4,h5,h6 {
   top: 0;
 }
 
-/* section */
+/**Card container style*/
+/**=======================================================================*/
 
-.section {
-  overflow: hidden;
-  margin: auto;
-  max-width: 1400px;
+.CardContainer{
+  margin-top: 100px;
+}
+@import url('https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css');
+ @import url(https://fonts.googleapis.com/css?family=Roboto);
+ html {
+	 box-sizing: border-box;
+	 -moz-box-sizing: border-box;
+	 -webkit-box-sizing: border-box;
+	 background: #eee;
+	 font-family: 'Roboto', sans-serif;
+}
+ *, *:before, *:after {
+	 box-sizing: inherit;
+}
+ body {
+	 font-weight: 100;
+	 margin: 0;
+	 text-rendering: optimizeLegibility;
+	 background: #eee;
+}
+ a {
+	 color: #505050;
+	 text-decoration: none;
+}
+ li {
+	 list-style: none;
+}
+ *:focus {
+	 outline: none;
+}
+ * {
+	 outline: 0;
+	 -webkit-appearance: none;
+	 -webkit-tap-highlight-color: transparent;
+	 -webkit-font-smoothing: antialiased !important;
+	 -moz-osx-font-smoothing: grayscale !important;
+}
+ .header-section {
+	 width: 98%;
+	 height: 50px;
+	 position: relative;
+	 margin: 0 auto;
+}
+ @media screen and (min-width: 1280px) {
+	 .header-section {
+		 width: 1001px;
+	}
+}
+ .class-for {
+	 text-align: left;
+	 font-size: 1.5em;
+	 color: #666;
+	 font-weight: 400;
+	 height: 100%;
+	 width: 65%;
+	 padding: 12px 0 0 0;
+	 margin: 0;
+	 float: left;
+}
+ @media screen and (max-width: 768px) {
+	 .class-for {
+		 font-size: 1.2em;
+		 padding: 18px 0 0 0;
+	}
+}
+ @media screen and (max-width: 414px) {
+	 .class-for {
+		 overflow: hidden;
+		 text-overflow: ellipsis;
+		 white-space: nowrap;
+	}
+}
+ @media screen and (max-width: 320px) {
+	 .class-for {
+		 width: 55%;
+	}
+}
+ .more-btn {
+	 position: absolute;
+	 width: 100px;
+	 height: 40px;
+	 z-index: 999;
+	 top: 0;
+	 right: 1px;
+	 margin-top: 12px;
+}
+ .more-btn button {
+	 font-size: 1.2em;
+   background: #2980B9;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+	 color: #fff;
+	 font-weight: 100;
+	 width: 90px;
+	 height: 35px;
+	 border-radius: 3px;
+	 border: none;
+	 float: right;
+	 cursor: pointer;
+}
+ @media screen and (max-width: 768px) {
+	 .more-btn button {
+		 font-size: 0.9em;
+		 width: 80px;
+		 height: 35px;
+	}
+}
+ .grid-section {
+	 width: 80%;
+	 height: auto;
+	 text-align: center;
+	 position: relative;
+	 margin: 0 auto;
+}
+ @media screen and (min-width: 1280px) {
+	 .grid-section {
+		 width: 1010px;
+	}
+}
+ @media screen and (max-width: 853px) {
+	 .grid-section {
+		 width: 90%;
+	}
+}
+ @media screen and (max-width: 640px) {
+	 .grid-section {
+		 width: 100%;
+	}
+}
+/* Blog Card */
+ .blog-card {
+	 width: calc(96.5% / 4);
+	 height: 250px;
+	 background: #fff;
+	 display: inline-block;
+	 margin: 4px 2px;
+	 vertical-align: top;
+	 cursor: pointer;
+}
+ .blog-card:hover {
+	 -webkit-box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.1);
+	 -moz-box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.1);
+	 box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.1);
+}
+ .blog-card__image {
+	 width: 100%;
+	 height: 150px;
+	 margin: 0;
+}
+ .blog-card__image img {
+	 width: 100%;
+	 height: 150px;
+	 object-fit: cover;
+	 opacity: 0.8;
+}
+ @media screen and (max-width: 1275px) {
+	 .blog-card {
+		 width: calc(95% / 4);
+	}
+}
+ @media screen and (max-width: 768px) {
+	 .blog-card {
+		 width: calc(96% / 3);
+	}
+}
+ @media screen and (max-width: 533px) {
+	 .blog-card {
+		 width: calc(96% / 2);
+	}
+}
+ @media screen and (max-width: 360px) {
+	 .blog-card {
+		 width: 98%;
+	}
+}
+ .blog-card__title {
+	 width: 100%;
+	 height: 40px;
+}
+ .blog-card__title p {
+	 margin: 8px 5px;
+	 text-align: left;
+	 color: #9c9c9c;
+	 font-size: 0.82em;
+	 font-weight: 600;
+}
+ .blog-card hr {
+	 width: 95%;
+	 border-top: 1px solid #ededed;
+	 margin-top: 20px;
+}
+ .blog-card__details {
+	 width: 100%;
+	 height: 40px;
+	 position: relative;
+	 margin-top: 12px;
+	 bottom: 0;
+	 padding: 0 5px;
+	 display: block;
+}
+ .blog-card__details--time, .blog-card__details--view, .blog-card__details--like {
+	 float: left;
+	 font-size: 0.75em;
+	 margin-top: 11px;
+	 color: #c0c0c0;
+}
+ .blog-card__details--view {
+	 float: right;
+}
+ .blog-card__details--like {
+	 float: right;
+	 margin-left: 9px;
+}
+ .blog-card__details--like i:hover {
+	 color: #1382c1;
+}
 }
 
-.section a {
-  position: relative;
-  float: left;
-  width: 100%;
+/** Footer design*/
+$primary-light-blue: #8DB9ED;
+$primary-line-color: #ccc;
+* {
+  box-sizing: border-box
 }
-
-.section a img {
-  width: 100%;
-  display: block;
+html, body {
+  height: 100%
 }
-
-.section a span {
-  color: #fff;
-  position: absolute;
-  left: 5%;
-  bottom: 5%;
-  font-size: 2em;
-  text-shadow: 1px 1px 0 #000;
+body {
+	font: 11px "Open Sans", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  //This justify-content is essentially unnecessary in Firefox and Chrome due to the flex: 1 1 auto on the main.  However, it's needed to push the footer down on IE11
+  justify-content: space-between
 }
-
-.section-split a span {
-  display: none;
+ul {
+  list-style: none
 }
-
-.section-split a:hover span {
-  display: block;
+a {
+  text-decoration: none
 }
-
-/* 48em = 768px */
-
-@media (min-width: 875px) {
-  .header li {
-    float: left;
-  }
-  .header li a {
-    padding: 20px 0px 0px 0px;
-    margin-left: 30px;
-  }
-  .header .menu {
-    clear: none;
-    float: right;
-    max-height: none;
-  }
-  .header .menu-icon {
-    display: none;
-  }
+.generic-anchor {
+	color: $primary-light-blue;
+	&:visited {
+		color: $primary-light-blue
+	}
+	&:hover {
+		color: $primary-line-color
+	}
 }
-
-/* 48em = 768px */
-
-@media (min-width: 48em) {
-  .section-split a {
-    width: 50%;
-  }
+.flex-rw {
+  display: flex;
+  flex-flow: row wrap;
 }
-
-
-.footer {
-  font-size: 14px;
-  padding: 40px 0;
-  background: #fff;
-  color: #888
+//This main is mostly to push the footer to the bottom and for demo purposes.
+main {
+  flex: 1 1 auto; //For IE11
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 10em "Oswald", sans-serif;
+  color: rgb(155,155,155);
+  line-height: 1
 }
-
-.footer .container {
-  position: relative
-}
-
-.footer ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  margin-top: 35px
-}
-
-.footer ul li {
-  margin-bottom: 10px
-}
-
-.footer ul a {
-  display: inline-block;
-  position: relative;
-  border: none;
-  padding-bottom: 4px;
-  text-transform: uppercase;
-  color: #000;
-  font-family: Montserrat, helvetica, arial, sans-serif;
-  font-weight: 700;
-  font-family: Montserrat, helvetica, arial, sans-serif;
-  font-weight: 400;
-  color: #888;
-  text-transform: none
-}
-
-.footer ul a:active,
-.footer ul a:focus,
-.footer ul a:hover {
-  outline: 0
-}
-
-.footer ul a:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  background: #000;
-  width: 0;
-  height: 2px;
-  -webkit-transition: all .4s cubic-bezier(.35, 1, .33, 1);
-  transition: all .4s cubic-bezier(.35, 1, .33, 1)
-}
-
-.footer ul a:hover {
-  color: #000
-}
-
-.footer ul a:hover:before {
+footer {
+  background: rgb(55,55,55);
+  margin-top: auto;
   width: 100%
 }
-
-.footer ul a:before {
-  background: #ffd300
+.footer-list-top {
+  width: 33.333%
 }
-
-.footer .col-logo .path-letter {
-  -webkit-transition: all .3s cubic-bezier(.35, 1, .33, 1);
-  transition: all .3s cubic-bezier(.35, 1, .33, 1);
-  opacity: 0;
-  -webkit-transform: translate3d(-10px, 0, 0);
-  transform: translate3d(-10px, 0, 0)
+.footer-list-top > li {
+  text-align: center;
+  padding-bottom: 10px
 }
-
-.footer .col-logo:hover .path-letter {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  opacity: 1;
+.footer-list-header {
+  padding: 10px 0 5px 0;
+  color: #fff;
+  font: 2.3vw "Oswald", sans-serif
+}
+.footer-list-anchor {
+  font: 1.3em "Open Sans", sans-serif
+}
+.footer-social-section {
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  margin-top: 5px;
+}
+.footer-social-section::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 10px;
+  border-top: 1px solid $primary-line-color;
+  width: calc(100% - 20px)
+}
+.footer-social-overlap {
+  position: relative;
+  z-index: 2;
+  background: rgb(55,55,55);
+  padding: 0 20px
+}
+.footer-social-connect {
+  display: flex;
+  align-items: center;
+  font: 3.5em "Oswald", sans-serif;
+  color: #fff
+}
+.footer-social-small {
+  font-size: 0.6em;
+  padding: 0px 20px
+}
+.footer-social-overlap > a {
+  font-size: 3em
+}
+.footer-social-overlap > a:not(:first-child) {
+  margin-left: 0.38em
+}
+.footer-bottom-section {
+  width: 100%;
+  padding: 10px;
+  border-top: 1px solid $primary-line-color;
+  margin-top: 10px
+}
+.footer-bottom-section > div:first-child {
+  margin-right: auto
+}
+.footer-bottom-wrapper {
+  font-size: 1.5em;
+  color: #fff
+}
+.footer-address {
+  display: inline;
+  font-style: normal
+}
+@media only screen and (max-width: 768px) {
+  .footer-list-header {
+    font-size: 2em
+  }
+  .footer-list-anchor {
+    font-size: 1.1em
+  }
+  .footer-social-connect {
+    font-size: 2.5em
+  }
+  .footer-social-overlap > a {
+    font-size: 2.24em
+  }
+  .footer-bottom-wrapper {
+    font-size: 1.3em
+  }
+}
+@media only screen and (max-width: 568px) {
+  main {
+    font-size: 5em
+  }
+  .footer-list-top {
+    width: 100%
+  }
+  .footer-list-header {
+    font-size: 3em;
+  }
+  .footer-list-anchor {
+    font-size: 1.5em
+  }
+  .footer-social-section {
+    justify-content: center
+  }
+  .footer-social-section::after {
+    top: 25%
+  }
+  .footer-social-connect {
+    margin-bottom: 10px;
+    padding: 0 10px
+  }
+  .footer-social-overlap {
+    display: flex;
+    justify-content: center;
+  }
+  .footer-social-icons-wrapper {
+    width: 100%;
+    padding: 0
+  }
+  .footer-social-overlap > a:not(:first-child) {
+    margin-left: 20px;
+  }
+  .footer-bottom-section {
+    padding: 0 5px 10px 5px
+  }
+  .footer-bottom-wrapper {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px
+  }
+}
+@media only screen and (max-width: 480px) {
+  .footer-social-overlap > a {
+    margin: auto
+  }
+  .footer-social-overlap > a:not(:first-child) {
+    margin-left: 0;
+  }
+  .footer-bottom-rights {
+    display: block
+  }
+}
+@media only screen and (max-width: 320px) {
+  .footer-list-header {
+    font-size: 2.2em
+  }
+  .footer-list-anchor {
+    font-size: 1.2em
+  }
+  .footer-social-connect {
+    font-size: 2.4em
+  }
+  .footer-social-overlap > a {
+    font-size: 2.24em
+  }
+  .footer-bottom-wrapper {
+    font-size: 1.3em
+  }
 }
