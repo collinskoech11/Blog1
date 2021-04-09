@@ -589,8 +589,10 @@ main {
   line-height: 1;
 }
 footer {
-  background: #373737;
-  margin-top: auto;
+  background: #005AA7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin-top: 50px;
   width: 100%;
 }
 .footer-list-top {
@@ -602,8 +604,8 @@ footer {
 }
 .footer-list-header {
   padding: 10px 0 5px 0;
-  color: #fff;
-  font: 2.3vw "Oswald", sans-serif;
+  color: #000;
+  font: 2.3vw "Open Sans", sans-serif;
 }
 .footer-list-anchor {
   font: 1.3em "Open Sans", sans-serif;
@@ -650,7 +652,7 @@ footer {
   width: 100%;
   padding: 10px;
   border-top: 1px solid #ccc;
-  margin-top: 10px;
+  margin-top: 50px;
 }
 .footer-bottom-section > div:first-child {
   margin-right: auto;
@@ -665,10 +667,10 @@ footer {
 }
 @media only screen and (max-width: 768px) {
   .footer-list-header {
-    font-size: 2em;
+    font-size: 50px;
  }
   .footer-list-anchor {
-    font-size: 1.1em;
+    font-size: 50px;
  }
   .footer-social-connect {
     font-size: 2.5em;
