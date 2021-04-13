@@ -752,3 +752,28 @@ footer {
     font-size: 1.3em;
  }
 }
+.flexHover:hover{
+  animation:transit 2s infinite;
+}
+@keyframes transit{
+  0%{
+    width:25px;
+    height:25px;
+  }
+  25%{
+    height:35px;
+    width:35px;
+  }
+  50%{
+    height:45px;
+    width:45px;
+  }
+  75%{
+    height:35px;
+    width:35px;
+  }
+  100%{
+    width:25px;
+    height:25px;
+  }
+}
