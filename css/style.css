@@ -673,18 +673,18 @@ footer {
     font-size: 50px;
  }
   .footer-social-connect {
-    font-size: 2.5em;
+    font-size: 50px;
  }
   .footer-social-overlap > a {
-    font-size: 2.24em;
+    font-size: 50px;
  }
   .footer-bottom-wrapper {
-    font-size: 1.3em;
+    font-size: 50px;
  }
 }
 @media only screen and (max-width: 568px) {
   main {
-    font-size: 5em;
+    font-size: 50px;
  }
   .footer-list-top {
     width: 100%;
@@ -710,8 +710,8 @@ footer {
     justify-content: center;
  }
   .footer-social-icons-wrapper {
-    width: 100%;
-    padding: 0;
+    width: 15px;
+    height: 15px;
  }
   .footer-social-overlap > a:not(:first-child) {
     margin-left: 20px;
