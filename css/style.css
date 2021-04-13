@@ -209,7 +209,6 @@ h1,h2,h3,h4,h5,h6 {
 
 .header {
   background-color: #fff;
-  position: fixed;
   width: 80%;
   z-index: 3;
   margin-left: 10%;
@@ -673,18 +672,18 @@ footer {
     font-size: 50px;
  }
   .footer-social-connect {
-    font-size: 2.5em;
+    font-size: 50px;
  }
   .footer-social-overlap > a {
-    font-size: 2.24em;
+    font-size: 50px;
  }
   .footer-bottom-wrapper {
-    font-size: 1.3em;
+    font-size: 50px;
  }
 }
 @media only screen and (max-width: 568px) {
   main {
-    font-size: 5em;
+    font-size: 50px;
  }
   .footer-list-top {
     width: 100%;
@@ -710,8 +709,8 @@ footer {
     justify-content: center;
  }
   .footer-social-icons-wrapper {
-    width: 100%;
-    padding: 0;
+    width: 15px;
+    height: 15px;
  }
   .footer-social-overlap > a:not(:first-child) {
     margin-left: 20px;
@@ -752,4 +751,29 @@ footer {
   .footer-bottom-wrapper {
     font-size: 1.3em;
  }
+}
+.flexHover:hover{
+  animation:transit 2s infinite;
+}
+@keyframes transit{
+  0%{
+    width:25px;
+    height:25px;
+  }
+  25%{
+    height:35px;
+    width:35px;
+  }
+  50%{
+    height:45px;
+    width:45px;
+  }
+  75%{
+    height:35px;
+    width:35px;
+  }
+  100%{
+    width:25px;
+    height:25px;
+  }
 }
