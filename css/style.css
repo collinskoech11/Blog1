@@ -752,7 +752,7 @@ footer {
     font-size: 1.3em;
  }
 }
-.flexHover:hover{
+.flexHover img:hover{
   animation:transit 2s infinite;
 }
 @keyframes transit{
