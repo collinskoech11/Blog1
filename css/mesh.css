@@ -1,7 +1,10 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat';
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Montserrat;
+
 }
 html {
   scroll-behavior: smooth;
@@ -158,6 +161,7 @@ main .articles {
   color: #9c9c9c;
   font-size: 0.9em;
   font-weight: 600;
+  font-family: Montserrat, helvetica, arial, sans-serif;
 }
 .blog-card .blog-details {
   width: 100%;
