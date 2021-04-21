@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
+        
         <div class="container">
         <section class="section1">
             <div class="sec1title">
@@ -17,29 +18,38 @@
             </div>	
         </section>
         <section class="section2"> 
-            <div class="contactform">
+            <div class="contactform" >
             <h5>Drop us a line...</h5>
-                <form action="#">
+                <form 
+                action="https://formspree.io/f/xzbyzknd"
+                method="POST"
+                >
+
                     <label for="firstname">
-                        <img style="width:25px; height:25px; color:#fff;" src="img/user.png" />
-                        <input name="firstname" class="form-fields" type="text">
+                        <img style="width:25px; height:25px;" src="img/user.png" />
+                        <input name="firstname" class="form-fields" type="text" text="Enter your name">
                     </label>
                     <label for="email">
-                        <img style="width:25px; height:25px; color:#fff;" src="img/envelope.png" />
-                        <input name="email" class="form-fields" type="text">
+                        <img style="width:25px; height:25px;" src="img/envelope.png" />
+                        <input name="_replyto" class="form-fields" type="email" text="Enter email">
                     </label>
                     <label for="contact">
-                        <img style="width:25px; height:25px; color:#fff;" src="img/caller1.png" />
+                        <img style="width:25px; height:25px;" src="img/phone1.png" />
                         <input name="contact" class="form-fields" type="text">
                     </label>
                     <label for="textarea">
-                        <img style="width:25px; height:25px; color:#fff;" src="img/message.png"  />
-                        <textarea class="form-fields" name="textarea" id="" cols="30" rows="10"></textarea>
+                        <img style="width:25px; height:25px;" src="img/message1.png"  />
+                        <textarea class="form-fields" name="message" id="" cols="30" rows="10"></textarea>
                     </label>
                    <a href="index.html"> <button class="form-fields button" value="Send" type="submit">Send <i class="fa fa-paper-plane"></i></button></a>
                 </form>
             </div>
-            <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div class="contmap" style='overflow:hidden;height:550px;width:100%;'><div id='gmap_canvas' style='height:100%;width:100%;'></div><div><small><a href="http://embedgooglemaps.com">									embed google maps							</a></small></div><div><small><a href="http://freedirectorysubmissionsites.com/">free web directories</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(19.075314480255834,72.88153973865361),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(19.075314480255834,72.88153973865361)});infowindow = new google.maps.InfoWindow({content:'<strong>My Location</strong><br>mumbai<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+
+            <section class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31840.935906353076!2d39.6991942393732!3d-3.9963617526282538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18400d67d787eba7%3A0x9a372725f4e70b80!2sOne%20World%20Apartments%20Mombasa!5e0!3m2!1sen!2ske!4v1619030492756!5m2!1sen!2ske" width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </section>
+    
+        
         </section>
     </div>
     </body>
