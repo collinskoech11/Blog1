@@ -50,7 +50,6 @@ input:focus, textarea:focus, keygen:focus, select:focus {
 }
 .section2 {
 	position: relative;
-	overflow: hidden;
 }
 .section2 .contactform {
     position: absolute;
@@ -60,6 +59,7 @@ input:focus, textarea:focus, keygen:focus, select:focus {
     background: #393939;
     padding: 30px 40px 70px;
     box-sizing: border-box;
+	height:auto;
 }
 .section2 .contactform input.form-fields,
 .section2 .contactform button.form-fields,
