@@ -40,6 +40,7 @@ input:focus, textarea:focus, keygen:focus, select:focus {
 }
 .sec1title {
 	text-align: center;
+	
 }
 .sec1title h1 {
 	    font-size: 40px;
@@ -113,8 +114,9 @@ input:focus, textarea:focus, keygen:focus, select:focus {
 }
 
 @media only screen and (max-width: 660px) {
-	.container {
+	.containercontact ::before {
 		padding: 10px 20px 30px;
+		
 	}
 	.contmap {
 		height: 475px !important;

@@ -46,7 +46,8 @@ h1,h2,h3,h4,h5,h6 {
 
 .container {
   padding: 0 20px;
-  margin: 0 auto
+  margin: 0 auto;
+
 }
 
 .container:after,
@@ -212,17 +213,19 @@ h1,h2,h3,h4,h5,h6 {
 
 .header {
   background-color:white;
-  z-index: 1;
+  z-index: 1000;
   padding: 0;
   width: 100%;
 }
 
 .header ul {
   margin: 0;
+  margin-top: 50px;
   padding: 0;
   list-style: none;
   overflow: hidden;
-  background-color: #fff;
+  background-color: rgb(255,255,255,0.5);
+
 }
 
 .header li a {
@@ -251,6 +254,7 @@ h1,h2,h3,h4,h5,h6 {
   clear: both;
   max-height: 0;
   transition: max-height .2s ease-out;
+  
 }
 
 /* menu icon */
@@ -806,6 +810,4 @@ height: fit-content;  }
     font-size: 0;
     animation: 30s slidy infinite; 
   }
-  .w3-container{
-    display: ;
-  }
+ 
