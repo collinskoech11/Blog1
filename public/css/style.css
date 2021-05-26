@@ -722,7 +722,7 @@ footer {
   border-top: 1px solid #ccc;
   width: calc(100% - 20px);
 }
-.footer-social-overlap {
+.footer-social -overlap {
   position: relative;
   z-index: 2;
   background: #373737;
