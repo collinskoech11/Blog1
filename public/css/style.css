@@ -36,6 +36,99 @@ p {
   top: 0;
 }
 
+/** Harmburger Menu CSS **/
+
+.harmburger {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+  cursor: pointer;
+}
+.harmburger .burger {
+  width: 50px;
+  height: 5px;
+  background: #000000b7;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+.harmburger .burger::before,
+.harmburger .burger::after {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 5px;
+  background: #000000b7;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+.harmburger .burger::before {
+  display: block;
+  transform: translateY(-16px);
+}
+.harmburger .burger::after {
+  display: block;
+  transform: translateY(16px);
+}
+.harmburger.open .burger {
+  transform: translateX(-50px);
+  background: transparent;
+}
+.harmburger.open .burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.harmburger.open .burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+/** Phone Slide Nav CSS **/
+nav .phone-menu {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  transform: translateY(-10px);
+  transition: transform 0.3s ease-out;
+  visibility: hidden;
+}
+.phone-menu.open {
+  transform: translateX(0);
+  visibility: visible;
+}
+.phone-menu ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  list-style: none;
+}
+.phone-menu li {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  margin-top: 10px;
+  background-color: #fff;
+}
+.phone-menu li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: #007bff;
+  text-transform: uppercase;
+}
+.desktop-menu {
+  /* should not be displayed on phone */
+  display: none;
+}
+
 h1,h2,h3,h4,h5,h6 {
   font-family: Montserrat;
   font-weight: 600;
@@ -46,7 +139,8 @@ h1,h2,h3,h4,h5,h6 {
 
 .container {
   padding: 0 20px;
-  margin: 0 auto
+  margin: 0 auto;
+
 }
 
 .container:after,
@@ -212,17 +306,19 @@ h1,h2,h3,h4,h5,h6 {
 
 .header {
   background-color:white;
-  z-index: 1;
+  z-index: 1000;
   padding: 0;
   width: 100%;
 }
 
 .header ul {
   margin: 0;
+  margin-top: 50px;
   padding: 0;
   list-style: none;
   overflow: hidden;
-  background-color: #fff;
+  background-color: rgb(255,255,255,0.5);
+
 }
 
 .header li a {
@@ -251,13 +347,13 @@ h1,h2,h3,h4,h5,h6 {
   clear: both;
   max-height: 0;
   transition: max-height .2s ease-out;
+  
 }
 
 /* menu icon */
 
 .header .menu-icon {
   cursor: pointer;
-  display: inline-block;
   float: right;
   padding: 28px 20px;
   position: relative;
@@ -626,7 +722,7 @@ footer {
   border-top: 1px solid #ccc;
   width: calc(100% - 20px);
 }
-.footer-social-overlap {
+.footer-social -overlap {
   position: relative;
   z-index: 2;
   background: #373737;
@@ -779,103 +875,37 @@ footer {
     height:25px;
   }
 }
-.wrapper{
-  width: 600px;
-  height: 300px;
-  position: relative;
-  background-color: var(--wrapper-background-c);
-  box-shadow: 0 0 80px var(--wrapper-shadow-c);
-}
- 
-  /* Images Area */
-  .images-area{
-    width: 100%;
-    height: 100%;
+
+@keyframes slidy {
+  0% { left: 0%; }
+  20% { left: 0%; }
+  25% { left: -100%; }
+  45% { left: -100%; }
+  50% { left: -200%; }
+  70% { left: -200%; }
+  75% { left: -300%; }
+  95% { left: -300%; }
+  100% { left: -400%; }
+  }
+  
+  /** AboutUs style*/
+  div#slider {
+height: fit-content;  }
+  div#slider figure img { 
+    width:20%; float: left;height: 40%;}
+  div#slider figure { 
     position: relative;
-    display: flex;
-    overflow: hidden;
-  }
-  .images-area img{
-    width: 100%;
-    transition: 0.3s cubic-bezier(.79,.03,0,.99);
-  }
-  
-  /* Buttons Area  */
-  .buttons-area{
-    width: 100%;
-    position: absolute;
-    top: 50%;
+    width: 500%;
+    height:200%;
+    margin: 0;    
     left: 0;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: space-between;
-    overflow: hidden;
+    text-align: left;
+    font-size: 0;
+    animation: 30s slidy infinite; 
   }
-  .buttons-area > div{
-    color: var(--white-c);
-    background-color: var(--buttons-background-c);
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-  }
-  /* Buttons | Previous And Next */
-  .buttons-area > div:first-child{
-    border-radius: 0 5px 5px 0;
-    margin-left: -100px;
-  }
-  .buttons-area > div:last-child{
-    border-radius: 5px 0 0 5px;
-    margin-right: -100px;
-  }
-  /* Show The Buttons */
-  .wrapper:hover .buttons-area > div:first-child{
-    margin-left: 0;
-  }
-  .wrapper:hover .buttons-area > div:last-child{
-    margin-right: 0;
-  }
-  .buttons-area div:hover:not(div.disabled){
-    background-color: var(--buttons-active-background-c);
-  }
-  .buttons-area div:not(div.disabled):active{
-    opacity: 0.7;
-  }
-  /* Disabled Button */
-  .buttons-area > div.disabled{
-    cursor: no-drop;
-    opacity: 0.3;
-  }
-  .buttons-area div i{
-    font-size: 70px;
-  }
-  
-  /* Pagination Area */
-  .pagination-area{
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-  }
-  /* Pagination Spans */
-  .pagination-area span{
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: var(--white-c);
-    margin-right: 5px;
-    transform: scale(0.5);
-    transition: 0.3s ease-in-out;
-    opacity: 0.4;
-  }
-  /* Current Active Span */
-  .pagination-area span.active{
-    transform: scale(1);
-    opacity: 1;
-  }
+
   .blogfont{
-    text-align: center;
-    background: rgb(2,0,36);
-    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(181,67,228,1) 0%, rgba(130,198,245,1) 50%, rgba(0,212,255,1) 100%);
+     margin-top: 15px;
   }
-  /*end wrapper*/
+
+ 
