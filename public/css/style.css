@@ -722,7 +722,7 @@ footer {
   border-top: 1px solid #ccc;
   width: calc(100% - 20px);
 }
-.footer-social-overlap {
+.footer-social -overlap {
   position: relative;
   z-index: 2;
   background: #373737;
@@ -896,11 +896,16 @@ height: fit-content;  }
   div#slider figure { 
     position: relative;
     width: 500%;
-    height:100%;
-    margin: 0;
+    height:200%;
+    margin: 0;    
     left: 0;
     text-align: left;
     font-size: 0;
     animation: 30s slidy infinite; 
   }
+
+  .blogfont{
+     margin-top: 15px;
+  }
+
  
